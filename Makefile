@@ -44,6 +44,8 @@ install:
 	cp $(NAME).desktop $(DESTDIR)/usr/share/applications/.
 	mkdir -p $(DESTDIR)/usr/share/pixmaps/
 	cp $(NAME).png $(DESTDIR)/usr/share/pixmaps
+	mkdir -p $(DESTDIR)/usr/share/licenses/$(NAME)
+	cp LICENSE $(DESTDIR)/usr/share/licenses/.
 
 clean:
 	@rm -f $(OBJS)
