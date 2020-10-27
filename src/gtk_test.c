@@ -197,7 +197,7 @@ static void on_activate(GtkApplication *app, gpointer *Elements)
     gtk_window_set_icon(GTK_WINDOW(((elements_t *)Elements)->window), icon);
 
     gtk_window_set_title(GTK_WINDOW(((elements_t *)Elements)->window), "Polaric Connect");
-    gtk_window_set_resizable(GTK_WINDOW(((elements_t *)Elements)->window), true);
+    gtk_window_set_resizable(GTK_WINDOW(((elements_t *)Elements)->window), false);
     // // Create a connect button
     ((elements_t *)Elements)->button = gtk_button_new_with_label(" Connect ");
     gtk_widget_set_name(((elements_t *)Elements)->button, "myButton");
@@ -217,7 +217,7 @@ static void on_activate(GtkApplication *app, gpointer *Elements)
     ((elements_t *)Elements)->key = gtk_entry_new();
     gtk_widget_set_name(((elements_t *)Elements)->key, "myEntry");
     ((elements_t *)Elements)->ret_string = gtk_label_new("");
-    gtk_label_set_width_chars(((elements_t *)Elements)->ret_string,52);
+    gtk_label_set_width_chars(GTK_LABEL(((elements_t *)Elements)->ret_string),52);
     ((elements_t *)Elements)->label_c_name = gtk_label_new(" Default Raspberry setup ");
     gtk_widget_set_name(((elements_t *)Elements)->label_c_name, "myLabel");
     ((elements_t *)Elements)->label_u_name = gtk_label_new(" Raspberry Username: ");
